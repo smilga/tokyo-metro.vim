@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   {{ modified }}
+" Modified:   {{modified}}
 " License:    MIT
 
 
@@ -16,7 +16,6 @@ if !has('gui_running') && &t_Co < 256
   finish
 endif
 
-set background=dark
 hi clear
 
 if exists('syntax_on')
@@ -25,11 +24,18 @@ endif
 
 let g:colors_name = 'iceberg'
 
+if &background == 'light'
+  {{light_rules}}
+  {{light_links}}
 
-{{ rules }}
+  if has('nvim')
+    {{light_neovim_term_defs}}
+  endif
+else
+  {{dark_rules}}
+  {{dark_links}}
 
-{{ links }}
-
-if has('nvim')
-  {{ neovim_term_defs }}
+  if has('nvim')
+    {{dark_neovim_term_defs}}
+  endif
 endif

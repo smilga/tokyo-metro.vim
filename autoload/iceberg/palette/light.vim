@@ -1,101 +1,105 @@
-function! iceberg#palette#dark#create() abort
+function! iceberg#palette#light#create() abort
   let hue_base = 230
 
-  let hue_red = 0
+  let hue_red    = 0
   let hue_orange = 25
-  let hue_green = 70
-  let hue_lblue = 190
-  let hue_blue = 215
-  let hue_purple = 255
+  let hue_green  = 100
+  let hue_lblue  = 195
+  let hue_blue   = 220
+  let hue_purple = 270
 
   " gui {{{
   let g = {}
 
   " palette
-  let g.blue   = pgmnt#color#hsl(hue_blue,   0.37, 0.65)
-  let g.green  = pgmnt#color#hsl(hue_green,  0.32, 0.63)
-  let g.lblue  = pgmnt#color#hsl(hue_lblue,  0.32, 0.65)
-  let g.orange = pgmnt#color#hsl(hue_orange, 0.65, 0.68)
-  let g.purple = pgmnt#color#hsl(hue_purple, 0.32, 0.68)
-  let g.red    = pgmnt#color#hsl(hue_red,    0.65, 0.68)
+  let g.blue   = pgmnt#color#hsl(hue_blue,   0.50, 0.48)
+  let g.green  = pgmnt#color#hsl(hue_green,  0.43, 0.43)
+  let g.lblue  = pgmnt#color#hsl(hue_lblue,  0.43, 0.45)
+  let g.orange = pgmnt#color#hsl(hue_orange, 0.55, 0.50)
+  let g.purple = pgmnt#color#hsl(hue_purple, 0.43, 0.53)
+  let g.red    = pgmnt#color#hsl(hue_red,    0.60, 0.65)
 
   " normal
-  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.20, 0.11)
-  let g.normal_fg = pgmnt#color#hsl(hue_base, 0.10, 0.80)
+  let g.normal_bg = pgmnt#color#hsl(hue_base, 0.15, 0.92)
+  let g.normal_fg = pgmnt#color#hsl(hue_base, 0.20, 0.25)
 
   " linenr
   let g.linenr_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
         \   'saturation': +0.05,
-        \   'lightness': +0.05,
+        \   'lightness': -0.03,
         \ })
-  let g.linenr_fg = pgmnt#color#lighten(g.linenr_bg, 0.20)
+  let g.linenr_fg = pgmnt#color#darken(g.linenr_bg, 0.20)
   let g.cursorlinenr_bg = pgmnt#color#adjust_color(
         \ g.linenr_bg, {
-        \   'saturation': +0.10,
-        \   'lightness': +0.10,
+        \   'saturation': +0.05,
+        \   'lightness': -0.05,
         \ })
   let g.cursorlinenr_fg = pgmnt#color#adjust_color(
         \ g.linenr_fg, {
         \   'saturation': +0.10, 
-        \   'lightness': +0.50,
+        \   'lightness': -0.20,
         \ })
 
   " diff
   let g.diffadd_bg = pgmnt#color#mix(g.green, g.normal_bg, 0.30)
-  let g.diffadd_fg = pgmnt#color#mix(g.green, g.normal_fg, 0.30)
+  let g.diffadd_fg = pgmnt#color#mix(g.green, g.normal_fg, 0.40)
   let g.diffchange_bg = pgmnt#color#mix(g.lblue, g.normal_bg, 0.30)
-  let g.diffchange_fg = pgmnt#color#mix(g.lblue, g.normal_fg, 0.30)
+  let g.diffchange_fg = pgmnt#color#mix(g.lblue, g.normal_fg, 0.40)
   let g.diffdelete_bg = pgmnt#color#mix(g.red, g.normal_bg, 0.30)
-  let g.diffdelete_fg = pgmnt#color#mix(g.red, g.normal_fg, 0.30)
-  let g.difftext_bg = pgmnt#color#mix(g.lblue, g.normal_bg, 0.6)
+  let g.diffdelete_fg = pgmnt#color#mix(g.red, g.normal_fg, 0.40)
+  let g.difftext_bg = pgmnt#color#mix(g.lblue, g.normal_bg, 0.50)
   let g.difftext_fg = g.normal_fg
 
   " statusline
-  let g.statusline_bg = pgmnt#color#hsl(hue_base, 0.09, 0.55)
-  let g.statusline_fg = pgmnt#color#hsl(hue_base, 0.09, 0.10)
-  let g.statuslinenc_bg = pgmnt#color#darken(g.normal_bg, 0.03)
-  let g.statuslinenc_fg = pgmnt#color#lighten(g.normal_bg, 0.20)
+  let g.statusline_bg = pgmnt#color#hsl(hue_base, 0.20, 0.70)
+  let g.statusline_fg = pgmnt#color#hsl(hue_base, 0.20, 0.40)
+  let g.statuslinenc_bg = g.cursorlinenr_bg
+  let g.statuslinenc_fg = pgmnt#color#darken(g.statuslinenc_bg, 0.20)
 
   " pmenu
-  let g.pmenu_bg = pgmnt#color#hsl(hue_base, 0.20, 0.30)
+  let g.pmenu_bg = g.cursorlinenr_bg
   let g.pmenu_fg = g.normal_fg
-  let g.pmenusel_bg = pgmnt#color#hsl(hue_base, 0.20, 0.45)
-  let g.pmenusel_fg = pgmnt#color#hsl(hue_base, 0.20, 0.95)
+  let g.pmenusel_bg = pgmnt#color#adjust_color(
+        \ g.pmenu_bg, {
+        \   'saturation': +0.05,
+        \   'lightness': -0.1,
+        \ })
+  let g.pmenusel_fg = g.normal_fg
 
   " misc
-  let g.comment_fg = pgmnt#color#hsl(hue_base, 0.12, 0.48)
+  let g.comment_fg = pgmnt#color#hsl(hue_base, 0.20, 0.63)
   let g.cursorline_bg = g.linenr_bg
   let g.folded_bg = g.linenr_bg
   let g.folded_fg = pgmnt#color#adjust_color(
         \ g.folded_bg, {
         \   'saturation': -0.05,
-        \   'lightness': +0.35,
+        \   'lightness': -0.35,
         \ })
-  let g.matchparen_bg = pgmnt#color#lighten(g.normal_bg, 0.20)
-  let g.matchparen_fg = pgmnt#color#lighten(g.normal_fg, 0.50)
-  let g.search_bg = pgmnt#color#hsl(hue_orange, 0.65, 0.70)
-  let g.search_fg = pgmnt#color#hsl(hue_orange, 0.50, 0.15)
+  let g.matchparen_bg = pgmnt#color#darken(g.normal_bg, 0.20)
+  let g.matchparen_fg = pgmnt#color#darken(g.normal_fg, 0.50)
+  let g.search_bg = pgmnt#color#hsl(hue_orange, 0.60, 0.80)
+  let g.search_fg = pgmnt#color#hsl(hue_orange, 0.50, 0.35)
   let g.specialkey_fg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
         \   'saturation': +0.08,
-        \   'lightness': +0.09,
+        \   'lightness': -0.09,
         \ })
-  let g.todo_fg = pgmnt#color#hsl(hue_green, 0.60, 0.75)
+  let g.todo_fg = pgmnt#color#hsl(hue_green, 0.50, 0.55)
   let g.visual_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
         \   'saturation': +0.05,
-        \   'lightness': +0.10,
+        \   'lightness': -0.10,
         \ })
-  let g.wildmenu_bg = pgmnt#color#lighten(g.statusline_bg, 0.30)
+  let g.wildmenu_bg = pgmnt#color#darken(g.statusline_bg, 0.30)
   let g.wildmenu_fg = g.statusline_fg
 
   " airline/lightline
-  let g.xline_base_bg = pgmnt#color#lighten(g.normal_bg, 0.15)
+  let g.xline_base_bg = pgmnt#color#darken(g.normal_bg, 0.15)
   let g.xline_base_fg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
         \   'saturation': -0.10,
-        \   'lightness': +0.35,
+        \   'lightness': -0.35,
         \ })
   let g.xline_edge_bg = g.statusline_bg
   let g.xline_edge_fg = g.statusline_fg
@@ -181,3 +185,4 @@ function! iceberg#palette#dark#create() abort
         \   'gui': g,
         \ }
 endfunction
+

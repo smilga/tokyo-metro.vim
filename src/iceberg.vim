@@ -3,8 +3,8 @@
 " See the official site for more information:
 " https://github.com/cocopon/pgmnt.vim
 
-function! s:create_context() abort
-  let p = iceberg#palette#dark#create()
+function! s:create_colors(palette) abort
+  let p = a:palette
   let c = p.cterm
   let g = p.gui
 
@@ -63,19 +63,21 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffDelete', {
+        \   'cterm': 'NONE',
         \   'ctermbg': c.diffdelete_bg,
         \   'ctermfg': c.diffdelete_fg,
+        \   'gui': 'NONE',
         \   'guibg': g.diffdelete_bg,
         \   'guifg': g.diffdelete_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffText', {
         \   'cterm': 'NONE',
-        \   'ctermbg': 30,
-        \   'ctermfg': 195,
+        \   'ctermbg': c.difftext_bg,
+        \   'ctermfg': c.difftext_fg,
         \   'gui': 'NONE',
-        \   'guibg': pgmnt#color#mix(g.lblue, g.normal_bg, 0.6),
-        \   'guifg': g.normal_fg,
+        \   'guibg': g.difftext_bg,
+        \   'guifg': g.difftext_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Directory', {
@@ -586,9 +588,25 @@ function! s:create_context() abort
   
   return {
         \   'links': links,
-        \   'modified': strftime('%Y-%m-%d %H:%M%z'),
         \   'neovim_term_defs': neovim_term_defs,
         \   'rules': rules,
+        \ }
+endfunction
+
+function! s:create_context() abort
+  let d = s:create_colors(
+        \ iceberg#palette#dark#create())
+  let l = s:create_colors(
+        \ iceberg#palette#light#create())
+
+  return {
+        \   'modified': strftime('%Y-%m-%d %H:%M%z'),
+        \   'dark_links': d.links,
+        \   'dark_rules': d.rules,
+        \   'dark_neovim_term_defs': d.neovim_term_defs,
+        \   'light_links': l.links,
+        \   'light_rules': l.rules,
+        \   'light_neovim_term_defs': l.neovim_term_defs,
         \ }
 endfunction
 
