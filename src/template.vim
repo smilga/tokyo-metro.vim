@@ -8,7 +8,7 @@
 " |  Y Y  \  ___/|  |  |  | \(  ()  )
 " |__|_|__/\____||__|  |__|   \____/
 "
-”
+"
 " File:       tokyo-metro.vim
 " Maintainer: koirand <koirand.jp@gmail.com>
 " Modified:   {{ modified }}
@@ -26,7 +26,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = 'iceberg'
+let g:colors_name = expand('<sfile>:t:r')
 
 
 {{ rules }}

@@ -11,7 +11,7 @@
 "
 " File:       tokyo-metro.vim
 " Maintainer: koirand <koirand.jp@gmail.com>
-" Modified:   2018-08-30 23:19+0900
+" Modified:   2018-08-31 13:19+0900
 " License:    MIT
 
 
@@ -26,7 +26,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = 'iceberg'
+let g:colors_name = expand('<sfile>:t:r')
 
 
 hi! ColorColumn cterm=NONE ctermbg=235 guibg=#1e2132
