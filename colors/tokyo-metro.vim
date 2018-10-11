@@ -53,7 +53,7 @@ hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Function ctermfg=41 guifg=#56b88a
 hi! Identifier cterm=NONE ctermfg=38 guifg=#4399bb
 hi! Include ctermfg=41 guifg=#56b88a
-hi! LineNr ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
+hi! LineNr ctermbg=NONE ctermfg=NONE guibg=NONE guifg=#444b71
 hi! MatchParen ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
 hi! MoreMsg ctermfg=180 guifg=#bca375
 hi! Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=#abadb3
@@ -66,7 +66,7 @@ hi! PreProc ctermfg=180 guifg=#bca375
 hi! Question ctermfg=180 guifg=#bca375
 hi! QuickFixLine ctermbg=236 ctermfg=252 guibg=#272c42 guifg=#abadb3
 hi! Search ctermbg=215 ctermfg=234 guibg=#e4b580 guifg=#392713
-hi! SignColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
+hi! SignColumn ctermbg=NONE ctermfg=239 guibg=NONE guifg=#444b71
 hi! Special ctermfg=180 guifg=#bca375
 hi! SpellBad ctermbg=124 ctermfg=252 gui=undercurl guisp=#e24240
 hi! SpellCap ctermbg=137 ctermfg=252 gui=undercurl guisp=#f19a36
@@ -87,13 +87,13 @@ hi! Title ctermfg=215 gui=NONE guifg=#f19a36
 hi! Todo ctermbg=234 ctermfg=180 guibg=#47413a guifg=#bca375
 hi! Type ctermfg=43 gui=NONE guifg=#4da79a
 hi! Underlined cterm=underline ctermfg=41 gui=underline guifg=#56b88a term=underline
-hi! VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#0f1117 guifg=#0f1117
+hi! VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=NONE guifg=#0f1117
 hi! Visual ctermbg=236 guibg=#272c42
 hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
 hi! diffAdded ctermfg=180 guifg=#bca375
 hi! diffRemoved ctermfg=196 guifg=#e24240
-hi! ALEErrorSign ctermbg=235 ctermfg=196 guibg=#1e2132 guifg=#e24240
-hi! ALEWarningSign ctermbg=235 ctermfg=215 guibg=#1e2132 guifg=#f19a36
+hi! ALEErrorSign ctermbg=235 ctermfg=196 guibg=NONE guifg=#e24240
+hi! ALEWarningSign ctermbg=235 ctermfg=215 guibg=NONE guifg=#f19a36
 hi! CtrlPMode1 ctermbg=241 ctermfg=234 guibg=#5a5f72 guifg=#17171b
 hi! EasyMotionShade ctermfg=239 guifg=#3d425b
 hi! EasyMotionTarget ctermfg=180 guifg=#bca375
