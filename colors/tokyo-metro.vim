@@ -1,10 +1,10 @@
 "   __          __
 " _/  |_  ____ |  | ____ ___. ____
-" \   __\/    \|  |/ |  V   |/    \ 
+" \   __\/    \|  |/ |  V   |/    \
 "  |  | (  ()  )    < \___  (  ()  )
 "  |__|  \____/|__|__\|_____|\____/
 "   _____   _____/  |________  ____
-"  /     \_/ __ \   __\_  __ \/    \ 
+"  /     \_/ __ \   __\_  __ \/    \
 " |  Y Y  \  ___/|  |  |  | \(  ()  )
 " |__|_|__/\____||__|  |__|   \____/
 "
@@ -34,7 +34,7 @@ hi! CursorColumn cterm=NONE ctermbg=235 guibg=#1e2132
 hi! CursorLine cterm=NONE ctermbg=235 guibg=#1e2132
 hi! Comment ctermfg=243 guifg=#6b7089
 hi! Constant ctermfg=141 guifg=#8b76d0
-hi! Cursor ctermbg=252 ctermfg=234 guibg=#abadb3 guifg=#161821
+hi! Cursor ctermbg=252 ctermfg=234 guibg=#abadb3 guifg=#020404
 hi! CursorLineNr ctermbg=237 ctermfg=253 guibg=#2a3158 guifg=#cdd1e6
 hi! Delimiter ctermfg=252 guifg=#abadb3
 hi! DiffAdd ctermbg=130 ctermfg=224 guibg=#47413a guifg=#b0aaa0
@@ -42,12 +42,12 @@ hi! DiffChange ctermbg=32 ctermfg=14 guibg=#233e4f guifg=#8ba7b5
 hi! DiffDelete ctermbg=124 ctermfg=224 guibg=#53242a guifg=#bb8c90
 hi! DiffText cterm=NONE ctermbg=30 ctermfg=195 gui=NONE guibg=#31657d guifg=#abadb3
 hi! Directory ctermfg=38 guifg=#4399bb
-hi! Error ctermbg=234 ctermfg=196 guibg=#161821 guifg=#e24240
-hi! ErrorMsg ctermbg=234 ctermfg=196 guibg=#161821 guifg=#e24240
-hi! WarningMsg ctermbg=234 ctermfg=196 guibg=#161821 guifg=#e24240
-hi! EndOfBuffer ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
-hi! NonText ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
-hi! SpecialKey ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
+hi! Error ctermbg=234 ctermfg=196 guibg=#020404 guifg=#e24240
+hi! ErrorMsg ctermbg=234 ctermfg=196 guibg=#020404 guifg=#e24240
+hi! WarningMsg ctermbg=234 ctermfg=196 guibg=#020404 guifg=#e24240
+hi! EndOfBuffer ctermbg=234 ctermfg=236 guibg=#020404 guifg=#242940
+hi! NonText ctermbg=234 ctermfg=236 guibg=#020404 guifg=#242940
+hi! SpecialKey ctermbg=234 ctermfg=236 guibg=#020404 guifg=#242940
 hi! Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
 hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Function ctermfg=41 guifg=#56b88a
@@ -56,7 +56,7 @@ hi! Include ctermfg=41 guifg=#56b88a
 hi! LineNr ctermbg=NONE ctermfg=NONE guibg=NONE guifg=#444b71
 hi! MatchParen ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
 hi! MoreMsg ctermfg=180 guifg=#bca375
-hi! Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=#abadb3
+hi! Normal ctermbg=232 ctermfg=252 guibg=#020404 guifg=#abadb3
 hi! Operator ctermfg=94 guifg=#91603a
 hi! Pmenu ctermbg=236 ctermfg=251 guibg=#3d425b guifg=#abadb3
 hi! PmenuSbar ctermbg=236 guibg=#3d425b
@@ -82,7 +82,7 @@ hi! String ctermfg=38 guifg=#4399bb
 hi! Structure ctermfg=41 guifg=#56b88a
 hi! TabLine cterm=NONE ctermbg=245 ctermfg=234 gui=NONE guibg=#818596 guifg=#17171b
 hi! TabLineFill cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#818596
-hi! TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#161821 guifg=#85878e
+hi! TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#020404 guifg=#85878e
 hi! Title ctermfg=215 gui=NONE guifg=#f19a36
 hi! Todo ctermbg=234 ctermfg=180 guibg=#47413a guifg=#bca375
 hi! Type ctermfg=43 gui=NONE guifg=#4da79a
@@ -103,7 +103,7 @@ hi! GitGutterAdd ctermbg=235 ctermfg=180 guibg=#1e2132 guifg=#bca375
 hi! GitGutterChange ctermbg=235 ctermfg=38 guibg=#1e2132 guifg=#4399bb
 hi! GitGutterChangeDelete ctermbg=235 ctermfg=38 guibg=#1e2132 guifg=#4399bb
 hi! GitGutterDelete ctermbg=235 ctermfg=196 guibg=#1e2132 guifg=#e24240
-hi! Sneak ctermbg=141 ctermfg=234 guibg=#8b76d0 guifg=#161821
+hi! Sneak ctermbg=141 ctermfg=234 guibg=#8b76d0 guifg=#020404
 hi! SneakScope ctermbg=236 ctermfg=243 guibg=#272c42 guifg=#6b7089
 hi! SyntasticErrorSign ctermbg=235 ctermfg=196 guibg=#1e2132 guifg=#e24240
 hi! SyntasticStyleErrorSign ctermbg=235 ctermfg=196 guibg=#1e2132 guifg=#e24240
