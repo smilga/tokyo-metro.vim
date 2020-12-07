@@ -99,10 +99,10 @@ hi! EasyMotionShade ctermfg=239 guifg=#3d425b
 hi! EasyMotionTarget ctermfg=180 guifg=#bca375
 hi! EasyMotionTarget2First ctermfg=215 guifg=#f19a36
 hi! EasyMotionTarget2Second ctermfg=215 guifg=#f19a36
-hi! GitGutterAdd ctermbg=235 ctermfg=180 guibg=#1e2132 guifg=#bca375
-hi! GitGutterChange ctermbg=235 ctermfg=38 guibg=#1e2132 guifg=#4399bb
-hi! GitGutterChangeDelete ctermbg=235 ctermfg=38 guibg=#1e2132 guifg=#4399bb
-hi! GitGutterDelete ctermbg=235 ctermfg=196 guibg=#1e2132 guifg=#e24240
+hi! GitGutterAdd ctermbg=234 ctermfg=180 guibg=#161821 guifg=#bca375
+hi! GitGutterChange ctermbg=234 ctermfg=38 guibg=#161821 guifg=#4399bb
+hi! GitGutterChangeDelete ctermbg=234 ctermfg=38 guibg=#161821 guifg=#4399bb
+hi! GitGutterDelete ctermbg=234 ctermfg=196 guibg=#161821 guifg=#e24240
 hi! Sneak ctermbg=141 ctermfg=234 guibg=#8b76d0 guifg=#161821
 hi! SneakScope ctermbg=236 ctermfg=243 guibg=#272c42 guifg=#6b7089
 hi! SyntasticErrorSign ctermbg=235 ctermfg=196 guibg=#1e2132 guifg=#e24240
